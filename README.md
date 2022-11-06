@@ -4,8 +4,9 @@
 <p><strong>- CRUD completo para gerenciamento de carros</strong></p>
 
 
+
 <h3>Pré requisitos:</h3>
-<p><strong>-Python</strong></p>
+<p><strong>Ter o Python instalado.</strong></p>
 <hr>
 
 <h3>Para testar o código</h3>
