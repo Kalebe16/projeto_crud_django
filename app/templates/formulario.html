@@ -1,0 +1,86 @@
+<!doctype html>
+
+{% load static %}
+
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD DJANGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'icone_carro.png' %}">
+
+
+    <style>
+      #imagem_de_fundo {
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to right, grey, white);
+      }
+
+    </style>
+
+  </head>
+
+
+  <body id="imagem_de_fundo">
+
+    <main class="container">
+
+      <div class="row mt-4">
+        <div class="col text-center shadow text-success bg-light">
+          <hr>
+          <h1>CADASTRO</h1>
+          <hr>
+        </div>
+      </div>
+
+
+      <div class="row mt-3">
+        <div class="col text-center">
+          <a href="/" class="btn btn-secondary btn-lg shadow-lg">Voltar</a>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center ">
+
+          <form name="form" id="form" method="post" action="{% if banco_de_dados %}/atualizar/{{banco_de_dados.id}}/{% else %}/criar/{% endif %}">
+            {% csrf_token %}
+
+            <!--{{form.as_p}}-->
+            <div class="form-group mt-4 ">
+                Modelo:
+                {{form.modelo}}
+            </div>
+            <div class="form-group mt-4">
+                Marca:
+                {{form.marca}}
+            </div>
+            <div class="form-group mt-4">
+                Ano:
+                {{form.ano}}
+            </div>
+            <input type="submit" class="btn btn-success mt-4 btn-lg shadow-lg" value="Salvar">
+
+          </form>
+          
+
+        </div>
+      </div>
+
+    </main>
+
+
+    
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </body>
+
+</html>

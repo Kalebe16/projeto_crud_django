@@ -1,0 +1,70 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD DJANGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'icone_carro.png' %}">
+
+
+    <style>
+      #imagem_de_fundo {
+      background-color: red; /* For browsers that do not support gradients */
+      background-image: linear-gradient(to right, grey, white);
+      }
+
+    </style>
+
+  </head>
+
+
+
+  <body id="imagem_de_fundo">
+
+    <main class="container">
+
+      <div class="row mt-4">
+        <div class="col text-center shadow text-success bg-light">
+          <hr>
+          <h1>VISUALIZAÇÃO</h1>
+          <hr>
+        </div>
+      </div>
+
+
+      <div class="row mt-3">
+        <div class="col text-center">
+          <a href="/" class="btn btn-secondary btn-lg shadow-lg">Voltar</a>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark mb-3 mt-4 container  shadow-lg" style="max-width: 18rem;">
+        <div class="card-header">ID: {{banco_de_dados.pk}}</div>
+        <div class="card-body">
+          <h5 class="bg-success">-Modelo: {{banco_de_dados.modelo}}</h5>
+          <h5 class="bg-success">-Marca: {{banco_de_dados.marca}}</h5>
+          <h5 class="bg-success">-Ano: {{banco_de_dados.ano}}</h5><br>  
+        </div>
+      </div>
+
+      
+
+    </main>
+
+
+    
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </body>
+
+</html>
